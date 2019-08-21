@@ -8,7 +8,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.drmmx.mvvmsampleapp.R
 import com.drmmx.mvvmsampleapp.databinding.ActivityLoginBinding
-import com.drmmx.mvvmsampleapp.util.toast
+import com.drmmx.mvvmsampleapp.util.*
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(), AuthListener {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,16 +23,18 @@ class LoginActivity : AppCompatActivity(), AuthListener {
     }
 
     override fun onStarted() {
-        toast("Login started")
+        progressBar.show()
     }
 
     override fun onSuccess(loginResponse: LiveData<String>) {
         loginResponse.observe(this, Observer {
+            progressBar.gone()
             toast(it)
         })
     }
 
     override fun onFailure(message: String) {
+        progressBar.gone()
         toast(message)
     }
 }
