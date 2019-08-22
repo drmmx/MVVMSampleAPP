@@ -4,11 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
-            name="vievModel"
+            name="viewModel"
             type="com.drmmx.mvvmsampleapp.ui.auth.AuthViewModel" />
-
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -87,7 +85,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
 
                 <EditText
-                    android:text="@={vievModel.email}"
+                    android:text="@={viewModel.email}"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="12dp"
@@ -96,10 +94,11 @@
                     android:drawablePadding="16dp"
                     android:hint="@string/my_email"
                     android:inputType="textEmailAddress"
-                    android:padding="12dp" />
+                    android:padding="12dp"
+                    tools:ignore="Autofill"/>
 
                 <EditText
-                    android:text="@={vievModel.password}"
+                    android:text="@={viewModel.password}"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="12dp"
@@ -108,7 +107,8 @@
                     android:drawablePadding="16dp"
                     android:hint="@string/password"
                     android:inputType="textPassword"
-                    android:padding="12dp" />
+                    android:padding="12dp"
+                    tools:ignore="Autofill"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -119,7 +119,7 @@
                     android:textColor="@color/colorPrimaryDark" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:onClick="@{vievModel::onLoginButtonClick}"
+                    android:onClick="@{viewModel::onLoginButtonClick}"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -130,6 +130,7 @@
 
             <TextView
                 android:id="@+id/textView"
+                android:onClick="@{viewModel::onSignUp}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/linearLayout2"

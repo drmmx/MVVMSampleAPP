@@ -7,7 +7,9 @@
     <string name="forget_password">Forget Password?</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up_here">Don\'t have an account? \n Sign Up Here</string>
+    <string name="sign_in_here">Already have an account? \n Sign In Here</string>
     <string name="confirm_password">Confirm password</string>
     <string name="username">Username</string>
     <string name="content_description">image</string>
+    <string name="sign_up">Sign Up</string>
 </resources>

@@ -11,7 +11,7 @@ import com.drmmx.mvvmsampleapp.data.db.entities.User
 import com.drmmx.mvvmsampleapp.databinding.ActivityLoginBinding
 import com.drmmx.mvvmsampleapp.ui.home.HomeActivity
 import com.drmmx.mvvmsampleapp.util.*
-import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_sign_up.*
 import org.kodein.di.android.kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.generic.instance
@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity(), AuthListener, KodeinAware {
 
         val binding: ActivityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login)
         val viewModel = ViewModelProviders.of(this, factory).get(AuthViewModel::class.java)
-        binding.vievModel = viewModel
+        binding.viewModel = viewModel
 
         viewModel.authListener = this
 
