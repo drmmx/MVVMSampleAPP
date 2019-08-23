@@ -77,4 +77,12 @@ dependencies {
     //Kodein
     implementation 'org.kodein.di:kodein-di-generic-jvm:6.3.3'
     implementation 'org.kodein.di:kodein-di-framework-android-x:6.3.3'
+
+    //Preferences
+    implementation "androidx.preference:preference-ktx:1.0.0"
+
+    //Groupie is a simple, flexible library for complex RecyclerView layouts. https://github.com/lisawray/groupie
+    implementation "com.xwray:groupie:2.5.1"
+    implementation "com.xwray:groupie-kotlin-android-extensions:2.5.1"
+    implementation "com.xwray:groupie-databinding:2.5.1"
 }
